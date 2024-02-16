@@ -9,7 +9,7 @@ services:
     - netbox-reports-files:/opt/netbox/netbox/reports:z,rw
     - netbox-scripts-files:/opt/netbox/netbox/scripts:z,rw
     healthcheck:
-      retries: 15
+      retries: 30
   netbox-worker:
     volumes:
     - /srv/dev-disk-by-uuid-ceea3a23-ec8c-4802-ad00-49f2541e6003/Downloads/Docker-New/netbox:/etc/netbox/config:z,ro
