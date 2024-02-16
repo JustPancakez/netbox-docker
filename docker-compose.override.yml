@@ -4,7 +4,7 @@ services:
     ports:
     - 8080:8080
     volumes:
-    - /var/lib/docker/netbox:/etc/netbox/config:z,ro
+    - /srv/dev-disk-by-uuid-ceea3a23-ec8c-4802-ad00-49f2541e6003/Downloads/Docker-New/netbox:/etc/netbox/config:z,ro
     - netbox-media-files:/opt/netbox/netbox/media:z,rw
     - netbox-reports-files:/opt/netbox/netbox/reports:z,rw
     - netbox-scripts-files:/opt/netbox/netbox/scripts:z,rw
@@ -12,13 +12,13 @@ services:
       retries: 15
   netbox-worker:
     volumes:
-    - /var/lib/docker/netbox:/etc/netbox/config:z,ro
+    - /srv/dev-disk-by-uuid-ceea3a23-ec8c-4802-ad00-49f2541e6003/Downloads/Docker-New/netbox:/etc/netbox/config:z,ro
     - netbox-media-files:/opt/netbox/netbox/media:z,rw
     - netbox-reports-files:/opt/netbox/netbox/reports:z,rw
     - netbox-scripts-files:/opt/netbox/netbox/scripts:z,rw
   netbox-housekeeping:
     volumes:
-    - /var/lib/docker/netbox:/etc/netbox/config:z,ro
+    - /srv/dev-disk-by-uuid-ceea3a23-ec8c-4802-ad00-49f2541e6003/Downloads/Docker-New/netbox:/etc/netbox/config:z,ro
     - netbox-media-files:/opt/netbox/netbox/media:z,rw
     - netbox-reports-files:/opt/netbox/netbox/reports:z,rw
     - netbox-scripts-files:/opt/netbox/netbox/scripts:z,rw
